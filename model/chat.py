@@ -23,7 +23,7 @@ class chat(object):
     try:
       items = self.chroma.engine.get_or_create_collection('documents').query(
         query_embeddings=self.ollama.generate_embeddings(data['question']),
-        n_results=5
+        n_results=10
       )
       context = '\n\n'.join(items.get('documents',[[]])[0])
       prompt = f"""

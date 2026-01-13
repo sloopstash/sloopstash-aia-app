@@ -70,7 +70,7 @@ def run_chat():
 
 
 # Initialize Flask app.
-app = Flask('AIA app',template_folder='view')
+app = Flask('SloopStash AIA app',template_folder='view')
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = False
 
 # App routes.
@@ -88,9 +88,9 @@ if __name__=='__main__':
   parser.add_argument('--host',default='0.0.0.0')
   args = parser.parse_args()
   try:
-    print('Starting AIA app service...')
+    print('Starting SloopStash AIA app service...')
     app.run(debug=True,host=args.host,port=args.port)
   except KeyboardInterrupt:
-    print('Stopping AIA app service...')
+    print('Stopping SloopStash AIA app service...')
   finally:
     pass
